@@ -19,7 +19,38 @@ def _(mo):
 
 @app.cell
 def _():
-    return
+    # Running Beatuifiers
+    # Rich Prettifier Code 
+    # ------------------------------------------------------
+    from rich import print as rprint # For rprinting
+    from rich.pretty import pprint # For pretty printing
+    from rich import inspect # For inspect
+    from rich.console import Console # For console.print
+    from rich.markdown import Markdown # For markdow
+    from rich.panel import Panel # For Panel()
+    from rich import box # For Panel Boxes
+    from rich.prompt import Prompt # For Prompting 
+    from rich.style import Style # For styles colors
+    from rich.text import Text # For text Styles
+    console = Console() # Standard code to access console
+    from rich.traceback import install
+    install(show_locals=True)
+    # -------------------------------------------------------
+
+    return (
+        Console,
+        Markdown,
+        Panel,
+        Prompt,
+        Style,
+        Text,
+        box,
+        console,
+        inspect,
+        install,
+        pprint,
+        rprint,
+    )
 
 
 @app.cell
@@ -52,7 +83,7 @@ def _():
 @app.cell
 def _():
     # Defining the model_id ti be called in the subsequent cell 
-    model_id="black-forest-labs/FLUX.1-dev"
+    model_id="hexgrad/Kokoro-82M"
     return (model_id,)
 
 
