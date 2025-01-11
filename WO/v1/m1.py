@@ -24,10 +24,22 @@ def _():
 
 
 @app.cell
-def _():
-    # Importing packages to haveit installed 
-
+def _(mo):
+    mo.md(r"""## Running HF Login for token""")
     return
+
+
+@app.cell
+def _():
+    from huggingface_hub import login
+    login()
+    return (login,)
+
+
+@app.cell
+def _():
+    from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
+    return CodeAgent, DuckDuckGoSearchTool, HfApiModel
 
 
 if __name__ == "__main__":
