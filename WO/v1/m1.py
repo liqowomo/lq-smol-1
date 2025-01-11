@@ -47,13 +47,13 @@ def _():
 @app.cell
 def _():
     # Defining the model_id ti be called in the subsequent cell 
-    model_id=""
+    model_id="cognitivecomputations/Dolphin3.0-Llama3.1-8B"
     return (model_id,)
 
 
 @app.cell
 def _(CodeAgent, DuckDuckGoSearchTool, HfApiModel, model_id):
-    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel(model_id))
+    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel(model_id=model_id))
     return (agent,)
 
 
