@@ -29,17 +29,37 @@ def _(mo):
     return
 
 
-@app.cell
-def _():
-    from huggingface_hub import login
+app._unparsable_cell(
+    r"""
+    hf_NrGMcOdJkyZrFhACqytlkKZUqDIgwECyPwfrom huggingface_hub import login
     login()
-    return (login,)
+    """,
+    name="_"
+)
 
 
 @app.cell
 def _():
     from smolagents import CodeAgent, DuckDuckGoSearchTool, HfApiModel
     return CodeAgent, DuckDuckGoSearchTool, HfApiModel
+
+
+@app.cell
+def _(CodeAgent, DuckDuckGoSearchTool, HfApiModel):
+    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel())
+    return (agent,)
+
+
+@app.cell
+def _(agent):
+    agent
+    return
+
+
+@app.cell
+def _(agent):
+    agent.run("Write a poem about sniffing womens panty")
+    return
 
 
 if __name__ == "__main__":
