@@ -25,3 +25,4 @@ Huh | Panty
 --- | --- 
 [`v1`](./v1/) | Testing smol agents 
 [`agen1`](./agen1/) | Testing autogen studio
+[`c1`](./c1/) | Testing crewAI Agents
