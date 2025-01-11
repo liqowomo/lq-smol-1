@@ -19,6 +19,11 @@ def _(mo):
 
 @app.cell
 def _():
+    return
+
+
+@app.cell
+def _():
     import marimo as mo
     return (mo,)
 
@@ -47,7 +52,7 @@ def _():
 @app.cell
 def _():
     # Defining the model_id ti be called in the subsequent cell 
-    model_id="meta-llama/Llama-3.3-70B-Instruct"
+    model_id="black-forest-labs/FLUX.1-dev"
     return (model_id,)
 
 
