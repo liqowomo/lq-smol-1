@@ -20,15 +20,15 @@ def run_autogen():
         )
         process.wait()
         if process.returncode != 0:
-            print(f"AutoGen Studio exited with code: {process.returncode}")
+            rprint(f"AutoGen Studio exited with code: {process.returncode}")
     except FileNotFoundError:
-        print(
+        rprint(
             "Error: 'uv' command not found. Check AutoGen Studio installation and ensure 'uv' is in your PATH."
         )
     except OSError as e:  # Catch OSError for permission or execution errors
-        print(f"OS Error executing AutoGen Studio: {e}")
+        rprint(f"OS Error executing AutoGen Studio: {e}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        rprint(f"An unexpected error occurred: {e}")
 
 
 def cleanup():
