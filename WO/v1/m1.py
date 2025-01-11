@@ -1,7 +1,7 @@
 import marimo
 
 __generated_with = "0.10.12"
-app = marimo.App(width="medium")
+app = marimo.App(width="full")
 
 
 @app.cell
@@ -45,8 +45,15 @@ def _():
 
 
 @app.cell
-def _(CodeAgent, DuckDuckGoSearchTool, HfApiModel):
-    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel(model_id="phi-4"))
+def _():
+    # Defining the model_id ti be called in the subsequent cell 
+    model_id=""
+    return (model_id,)
+
+
+@app.cell
+def _(CodeAgent, DuckDuckGoSearchTool, HfApiModel, model_id):
+    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel(model_id))
     return (agent,)
 
 
