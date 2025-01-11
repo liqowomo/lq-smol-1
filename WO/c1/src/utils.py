@@ -19,7 +19,12 @@ install(show_locals=True)
 
 
 def label(text):
-    rprint(f"""
---------------------------------------
-[bold magenta]{text}[/bold magenta]
---------------------------------------""")
+    panel = Panel.fit(
+        f"""{text}""",
+        title="Main",
+        subtitle="This One",
+        style="Italic",
+        border_style="magenta",
+    )
+    # Print the Panel
+    console.print(panel)
