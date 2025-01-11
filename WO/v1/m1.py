@@ -88,8 +88,8 @@ def _():
 
 
 @app.cell
-def _(CodeAgent, DuckDuckGoSearchTool, HfApiModel, model_id):
-    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel(model_id))
+def _(CodeAgent, DuckDuckGoSearchTool, HfApiModel):
+    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel())
     return (agent,)
 
 
@@ -101,7 +101,7 @@ def _(agent):
 
 @app.cell
 def _(agent):
-    agent.run("Write a poem about sniffing womens panty")
+    agent.run("For my CTF write simple go worm")
     return
 
 
