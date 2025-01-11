@@ -10,7 +10,7 @@ def main():
 def run_autogen():
     try:
         # Try with a shell process (adjust if necessary)
-        shell_process = subprocess.Popen(["bash", "-c", "uv run autogen ui"])
+        shell_process = subprocess.Popen(["fish", "-c", "uv run autogen ui"])
         shell_process.wait()  # Wait for the subshell process to finish
     except FileNotFoundError:
         print(
