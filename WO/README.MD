@@ -1,6 +1,7 @@
 
 1. [WO](#wo)
 2. [PKG install](#pkg-install)
+3. [Dira](#dira)
 
 
 # WO 
@@ -17,3 +18,10 @@ smolagents
 huggingface_hub
 DuckDuckGoSearch
 ```
+
+# Dira 
+
+Huh | Panty 
+--- | --- 
+[`v1`](./v1/) | Testing smol agents 
+[`agen1`](./agen1/) | Testing autogen studio
