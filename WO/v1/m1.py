@@ -46,7 +46,7 @@ def _():
 
 @app.cell
 def _(CodeAgent, DuckDuckGoSearchTool, HfApiModel):
-    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel())
+    agent = CodeAgent(tools=[DuckDuckGoSearchTool()], model=HfApiModel(model_id="phi-4"))
     return (agent,)
 
 
