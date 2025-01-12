@@ -21,8 +21,5 @@ DuckDuckGoSearch
 
 # Dira 
 
-Huh | Panty 
---- | --- 
-[`v1`](./v1/) | Testing smol agents 
-[`agen1`](./agen1/) | Testing autogen studio
-[`c1`](./c1/) | Testing crewAI Agents
+Since running multiple tests here they are in their own dirs 
+
