@@ -14,13 +14,15 @@ export NC='\033[0m' # No Color
 
 # Commands
 b1() {
-    echo -e "${CYAN} ==================================="
-    echo -e "$hey"
+    echo -e "${CYAN}==================================="
+    echo -e "UV Commands for insalling necessary pkgs"
     echo -e "================================================= ${NC}"
 }
 
 c1() {
-    echo -e "${GREEN} hi"
+    CO1="uv add crewai crewai-tools "
+    echo -e "${GREEN} $CO1 ${NC}"
+    $CO1
 }
 
 # Execution
