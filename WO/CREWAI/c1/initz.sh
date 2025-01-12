@@ -21,8 +21,10 @@ b1() {
 
 c1() {
     CO1="uv add crewai crewai-tools "
+    CO2="uv tree"
     echo -e "${GREEN} $CO1 ${NC}"
     $CO1
+    $CO2
 }
 
 # Execution
