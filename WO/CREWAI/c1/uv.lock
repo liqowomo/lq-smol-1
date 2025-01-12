@@ -254,6 +254,7 @@ name = "c1"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "chromadb" },
     { name = "crewai" },
     { name = "crewai-tools" },
     { name = "pysqlite3-binary" },
@@ -262,6 +263,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "chromadb", specifier = ">=0.5.23" },
     { name = "crewai", specifier = ">=0.95.0" },
     { name = "crewai-tools", specifier = ">=0.25.8" },
     { name = "pysqlite3-binary", specifier = ">=0.5.4" },
