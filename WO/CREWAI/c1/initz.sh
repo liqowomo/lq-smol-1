@@ -20,6 +20,7 @@ b1() {
 }
 
 c1() {
+    echo -e "${CYAN} Installing necessary packages${NC}"
     CO1="uv add crewai crewai-tools "
     CO2="uv tree"
     echo -e "${GREEN} $CO1 ${NC}"
@@ -27,6 +28,12 @@ c1() {
     $CO2
 }
 
+c2() {
+    echo -e "${CYAN} Crew AI Setup and Commands ${NC}"
+    CO1="uv run crewai crew ai1 "
+    echo -e "${GREEN} $CO1 ${NC}"
+    $CO1
+}
+
 # Execution
-b1
-c1
+c2
