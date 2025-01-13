@@ -1,14 +1,5 @@
-# Main Oython file fil for execution
-from src.utils import label
-
-from rich import print as rprint  # For rprinting
-from rich.traceback import install
-
-install(show_locals=True)
-
-
 def main():
-    label("Panty")
+    print("Hello from c1!")
 
 
 if __name__ == "__main__":
