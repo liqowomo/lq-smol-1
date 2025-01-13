@@ -21,8 +21,8 @@ install(show_locals=True)
 def label1(text):
     panel = Panel.fit(
         f"""[green_yellow]{text}[/green_yellow]""",
-        title="Mistress",
-        subtitle="ToiletSlave",
+        title="<:",
+        subtitle=":>",
         style="Italic",
         border_style="magenta",
     )
