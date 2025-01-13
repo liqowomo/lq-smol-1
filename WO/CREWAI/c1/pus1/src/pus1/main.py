@@ -2,7 +2,7 @@
 import sys
 import warnings
 
-from crew import Pus1
+from .crew import Pus1
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
