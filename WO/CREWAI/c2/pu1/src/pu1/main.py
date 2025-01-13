@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # interpolate any tasks and agents information
 
 
-def run():
+def pu1run():
     """
     Run the crew.
     """
