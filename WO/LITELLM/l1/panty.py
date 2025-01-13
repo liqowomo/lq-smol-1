@@ -1,10 +1,14 @@
+from src.utils import label1
+from src.work import or_run1
+
 from rich.traceback import install
 
-install(show_locals=True)
+install(show_locals=False)
 
 
 def main():
-    print("Hello from l1!")
+    label1("Testing OpenRouter here")
+    or_run1()
 
 
 if __name__ == "__main__":
