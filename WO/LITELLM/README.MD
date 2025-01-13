@@ -3,6 +3,7 @@
 2. [Main Repo](#main-repo)
 3. [Instaling Panties](#instaling-panties)
 4. [Setting the environment variable in fish](#setting-the-environment-variable-in-fish)
+5. [Free OpenRouter Models](#free-openrouter-models)
 
 
 # LiteLLM
@@ -64,3 +65,8 @@ set -gx mykey "696" # -gx makes it global (available to subprocesses)
 # For Bash/ZSH 
 export mykey="696"
 ```
+
+# Free OpenRouter Models 
+
+https://openrouter.ai/models?max_price=0 
+- Look at your main code , and use all of these free models only 
