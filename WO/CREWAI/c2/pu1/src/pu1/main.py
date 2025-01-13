@@ -16,7 +16,7 @@ def pu1run():
     """
     Run the crew.
     """
-    inputs = {"topic": "AI LLMs"}
+    inputs = {"topic": "Techniques for finding high value bug bounties in webapps"}
     Pu1().crew().kickoff(inputs=inputs)
 
 
