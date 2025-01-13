@@ -40,7 +40,9 @@ class Pu1:
 
     @task
     def reporting_task(self) -> Task:
-        return Task(config=self.tasks_config["reporting_task"], output_file="report.md")
+        return Task(
+            config=self.tasks_config["reporting_task"], output_file="pu1report.md"
+        )
 
     @crew
     def crew(self) -> Crew:
