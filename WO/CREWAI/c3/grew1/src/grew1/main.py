@@ -16,11 +16,13 @@ def grew1_run():
     """
     Run the crew.
     """
-    inputs = {"topic": "AI LLMs"}
+    inputs = {
+        "topic": "Describe the highest paying bugs in bug bounty programs and how to find them, also write code examples for testing vulnerability."
+    }
     Grew1().crew().kickoff(inputs=inputs)
 
 
-def train():
+def grew1_train():
     """
     Train the crew for a given number of iterations.
     """
@@ -34,7 +36,7 @@ def train():
         raise Exception(f"An error occurred while training the crew: {e}")
 
 
-def replay():
+def grew1_replay():
     """
     Replay the crew execution from a specific task.
     """
@@ -45,7 +47,7 @@ def replay():
         raise Exception(f"An error occurred while replaying the crew: {e}")
 
 
-def test():
+def grew1_test():
     """
     Test the crew execution and returns the results.
     """
