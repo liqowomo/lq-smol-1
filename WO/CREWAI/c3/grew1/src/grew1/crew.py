@@ -41,7 +41,8 @@ class Grew1:
     @task
     def reporting_task(self) -> Task:
         return Task(
-            config=self.tasks_config["reporting_task"], output_file="rez/report.md"
+            config=self.tasks_config["reporting_task"],
+            output_file="rez/grew1_report.md",
         )
 
     @crew
