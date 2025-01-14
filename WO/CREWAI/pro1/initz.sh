@@ -30,10 +30,11 @@ c1() {
 
 c2() {
     echo -e "${CYAN} Crew AI Setup and Commands ${NC}"
-    CO1="uv run crewai create crew pu1 "
+    CO1="uv run crewai create crew crz/C1 "
     echo -e "${GREEN} $CO1 ${NC}"
     $CO1
 }
 
 # Execution
+c1
 c2
