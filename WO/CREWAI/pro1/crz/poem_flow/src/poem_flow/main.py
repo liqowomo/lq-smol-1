@@ -7,6 +7,10 @@ from crewai.flow.flow import Flow, listen, start
 
 from poem_flow.crews.poem_crew.poem_crew import PoemCrew
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 class PoemState(BaseModel):
     sentence_count: int = 1
@@ -14,7 +18,6 @@ class PoemState(BaseModel):
 
 
 class PoemFlow(Flow[PoemState]):
-
     @start()
     def generate_sentence_count(self):
         print("Generating sentence count")
