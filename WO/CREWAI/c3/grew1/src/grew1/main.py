@@ -17,7 +17,7 @@ def grew1_run():
     Run the crew.
     """
     inputs = {
-        "topic": "Describe the highest paying bugs in bug bounty programs and how to find them, also write code examples for testing vulnerability."
+        "topic": "Describe the highest paying bugs in bug bounty programs and how to find them also draw mermaid diagrams, also write code examples for testing vulnerability."
     }
     Grew1().crew().kickoff(inputs=inputs)
 
