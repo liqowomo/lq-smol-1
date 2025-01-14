@@ -2,7 +2,7 @@
 import sys
 import warnings
 
-from grew1.crew import Grew1
+from .crew import Grew1
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -11,13 +11,12 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
-def run():
+
+def grew1_run():
     """
     Run the crew.
     """
-    inputs = {
-        'topic': 'AI LLMs'
-    }
+    inputs = {"topic": "AI LLMs"}
     Grew1().crew().kickoff(inputs=inputs)
 
 
@@ -25,14 +24,15 @@ def train():
     """
     Train the crew for a given number of iterations.
     """
-    inputs = {
-        "topic": "AI LLMs"
-    }
+    inputs = {"topic": "AI LLMs"}
     try:
-        Grew1().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
+        Grew1().crew().train(
+            n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs
+        )
 
     except Exception as e:
         raise Exception(f"An error occurred while training the crew: {e}")
+
 
 def replay():
     """
@@ -44,15 +44,16 @@ def replay():
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
 
+
 def test():
     """
     Test the crew execution and returns the results.
     """
-    inputs = {
-        "topic": "AI LLMs"
-    }
+    inputs = {"topic": "AI LLMs"}
     try:
-        Grew1().crew().test(n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs)
+        Grew1().crew().test(
+            n_iterations=int(sys.argv[1]), openai_model_name=sys.argv[2], inputs=inputs
+        )
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")

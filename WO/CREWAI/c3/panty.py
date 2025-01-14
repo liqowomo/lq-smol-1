@@ -1,5 +1,12 @@
+from ut.utils import label1
+
+from rich.traceback import install
+
+install(show_locals=True)
+
+
 def main():
-    print("Hello from c3!")
+    label1("Running grew1 Crew")
 
 
 if __name__ == "__main__":
