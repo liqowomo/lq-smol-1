@@ -15,9 +15,9 @@ def main():
 
 
 # --- Functions being called from the crews -
-def C1RUN():
-    label1("crz/C1 Run")
-    C1_run()
+def P1RUN():
+    label1("crz/P1 Run")
+    p1_run()
 
 
 if __name__ == "__main__":

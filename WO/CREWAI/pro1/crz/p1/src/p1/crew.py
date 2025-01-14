@@ -4,6 +4,7 @@ from crewai.tools import SerperDevTool, ScraperWebsiteTool, FileWriterTool
 from dotenv import load_dotenv
 
 load_dotenv()
+tool = SerperDevTool()
 
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
