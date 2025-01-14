@@ -31,8 +31,9 @@ echo "cfonts = Text banner"
 echo "artem = Image to color ascii"
 echo "bat = cat alternative"
 echo "lolcrab = Rainbow text generator"
+echo "bottom = Alternative to btop in rust"
 
-cargo install eza fd-find starship ripgrep cfonts artem bat lolcrab image-to-ascii
+cargo install eza fd-find starship ripgrep cfonts artem bat lolcrab image-to-ascii bottom
 
 # Starship init and preset
 echo "starship init fish | source" >~/.config/fish/config.fish
@@ -41,7 +42,7 @@ cp ./wz/config2.fish ~/.config/fish/config.fish
 
 # Installing UV and BUN
 curl -LsSf https://astral.sh/uv/install.sh | sh
-echo 'uv generate-shell-completion fish | source' >> ~/.config/fish/config.fish
-echo 'uvx --generate-shell-completion fish | source' >> ~/.config/fish/config.fish
+echo 'uv generate-shell-completion fish | source' >>~/.config/fish/config.fish
+echo 'uvx --generate-shell-completion fish | source' >>~/.config/fish/config.fish
 curl -fsSL https://bun.sh/install | bash
 source ~/.bashrc && source ~/,profile
