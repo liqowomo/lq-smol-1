@@ -6,12 +6,13 @@ from crz.p1.src.p1.main import p1_run
 # --- Imports from rich for better errors
 from rich.traceback import install
 
-install(show_locals=True)
+install(show_locals=False)
 
 
 # --- Main Function ---
 def main():
     label1("Exdcuting...crz/C1 - Crew 1")
+    P1RUN()
 
 
 # --- Functions being called from the crews -

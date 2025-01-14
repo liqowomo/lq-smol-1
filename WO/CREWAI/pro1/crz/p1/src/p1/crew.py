@@ -1,10 +1,10 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-from crewai.tools import SerperDevTool, ScraperWebsiteTool, FileWriterTool
+from crewai_tools import SerperDevTool, ScrapeWebsiteTool, FileWriterTool
 from dotenv import load_dotenv
 
 load_dotenv()
-tool = SerperDevTool()
+
 
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
@@ -37,7 +37,7 @@ class P1:
     def website_scraper(self) -> Agent:
         return Agent(
             config=self.agents_config["website_scraper"],
-            tools=[ScraperWebsiteTool()],
+            tools=[ScrapeWebsiteTool()],
             verbose=True,
         )
 
