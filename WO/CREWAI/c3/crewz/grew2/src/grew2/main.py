@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # interpolate any tasks and agents information
 
 
-def run():
+def grew2_run():
     """
     Run the crew.
     """
@@ -22,7 +22,7 @@ def run():
     Grew2().crew().kickoff(inputs=inputs)
 
 
-def train():
+def grew2_train():
     """
     Train the crew for a given number of iterations.
     """
@@ -36,7 +36,7 @@ def train():
         raise Exception(f"An error occurred while training the crew: {e}")
 
 
-def replay():
+def grew2_replay():
     """
     Replay the crew execution from a specific task.
     """
@@ -47,7 +47,7 @@ def replay():
         raise Exception(f"An error occurred while replaying the crew: {e}")
 
 
-def test():
+def grew2_test():
     """
     Test the crew execution and returns the results.
     """
