@@ -8,10 +8,8 @@ from crewai.flow.flow import Flow, listen, start
 from .crews.poem_crew.poem_crew import PoemCrew
 
 from dotenv import load_dotenv
-import agentops
 
 load_dotenv()
-agentops.init()
 
 
 class PoemState(BaseModel):

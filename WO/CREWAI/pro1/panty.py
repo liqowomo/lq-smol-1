@@ -1,17 +1,20 @@
 # Standard imports
+import agentops
 from ut.utils import label1
 from crz.p1.src.p1.main import p1_run
 from crz.poem_flow.src.poem_flow.main import kickoff, plot
 
+
 # --- Imports from rich for better errors
 from rich.traceback import install
 
+agentops.init()
 install(show_locals=False)
 
 
 # --- Main Function ---
 def main():
-    powem_flowRUN()
+    P1RUN()
 
 
 # --- Functions being called from the crews -
