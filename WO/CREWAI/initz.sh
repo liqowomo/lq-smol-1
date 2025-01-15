@@ -21,7 +21,7 @@ b1() {
 
 c1() {
     echo -e "${CYAN} Installing necessary packages${NC}"
-    CO1="uv add crewai crewai-tools "
+    CO1="uv add crewai crewai-tools agentops"
     CO2="uv tree"
     echo -e "${GREEN} $CO1 ${NC}"
     $CO1
