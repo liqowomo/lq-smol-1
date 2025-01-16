@@ -36,4 +36,4 @@ c2() {
 }
 
 # Execution
-c2
+c1
