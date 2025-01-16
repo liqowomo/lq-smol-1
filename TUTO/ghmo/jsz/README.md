@@ -1,5 +1,9 @@
 # j1
 
+1. Using bung to interact with ghm
+
+# Usage
+
 To install dependencies:
 
 ```bash

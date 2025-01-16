@@ -33,7 +33,11 @@ export async function main() {
 
 	const myrez = response.choices[0].message.content
 
-	fs.writeFile('output.txt', myrez ??, (err) => {
+	const dateTime = new Date()
+		.toLocaleString()
+		.replace(/:/g, '-')
+		.replace(/ /g, '_')
+	fs.writeFile('output${dateTime}.txt', myrez!, (err) => {
 		if (err) {
 			console.error(err)
 		} else {
