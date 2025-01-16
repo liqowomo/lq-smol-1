@@ -1,4 +1,7 @@
 import gradio as gr
+from rich.traceback import install
+
+install(show_locals=True)
 
 
 def App1():
