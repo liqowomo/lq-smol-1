@@ -9,3 +9,7 @@ async def s1_fn():
     rprint("World")
     await asyncio.sleep(1)
     rprint("!")
+
+
+async def s1_fn2():
+    rprint("Hello World")
