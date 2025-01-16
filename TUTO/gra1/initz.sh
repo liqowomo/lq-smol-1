@@ -15,16 +15,17 @@ export NC='\033[0m' # No Color
 # Commands
 b1() {
     echo -e "${CYAN}======================="
-    echo -e " Asyncio Testing Installs here"
+    echo -e " Gradio Testing Installs Here"
     echo -e "=======================${NC}"
 }
 
 c1() {
     # PKG Installs
-    CO1="uv add rich asyncio"
+    CO1="uv add rich asyncio gradio"
+    CO2="uv tree"
     echo -e "${GREEN} PKG Install with uv Executing..."
     echo -e " $CO1 ${NC}"
-    $CO1
+    $CO1 && $CO2
 
 }
 
