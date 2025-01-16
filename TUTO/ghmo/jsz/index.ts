@@ -4,6 +4,7 @@ Run this model in Javascript
 > npm install openai
 */
 import OpenAI from 'openai'
+import fs from 'fs'
 
 // To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
 // Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
@@ -30,7 +31,15 @@ export async function main() {
 		top_p: 1,
 	})
 
-	console.log(response.choices[0].message.content)
+	const myrez = response.choices[0].message.content
+
+	fs.writeFile('output.txt', myrez ??, (err) => {
+		if (err) {
+			console.error(err)
+		} else {
+			console.log('Content written to output.txt')
+		}
+	})
 }
 
 main().catch((err) => {
