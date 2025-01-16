@@ -35,5 +35,13 @@ c2() {
     $CO1
 }
 
+c3() {
+    # Create flow ehre
+    echo -e "${CYAN} Creating Flow, Executing... ${NC}"
+    CO1="uv run crewai create flow mimu "
+    echo -e "${GREEN}$CO1 ${NC}"
+    $CO1
+}
+
 # Execution
-c1
+c3
