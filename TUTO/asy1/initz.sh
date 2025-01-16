@@ -14,11 +14,18 @@ export NC='\033[0m' # No Color
 
 # Commands
 b1() {
-    echo -e "${RED} hey"
+    echo -e "${CYAN}======================="
+    echo -e " Asyncio Testing Installs here"
+    echo -e "=======================${NC}"
 }
 
 c1() {
-    echo -e "${GREEN} hi"
+    # PKG Installs
+    CO1="uv add rich asyncio"
+    echo -e "${GREEN} PKG Install with uv Executing..."
+    echo -e " $CO1 ${NC}"
+    $CO1
+
 }
 
 # Execution
