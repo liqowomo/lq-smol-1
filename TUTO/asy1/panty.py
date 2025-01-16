@@ -1,5 +1,13 @@
+# Main Entry Point here
+from ut.utils import label1
+from src.s1 import main
+from rich.traceback import install
+
+install(show_locals=True)
+
+
 def main():
-    print("Hello from asy1!")
+    label1("Panty.py")
 
 
 if __name__ == "__main__":
