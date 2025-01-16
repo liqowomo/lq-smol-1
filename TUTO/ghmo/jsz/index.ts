@@ -15,10 +15,14 @@ export async function main() {
 		apiKey: token,
 	})
 
+	// This is the long ass question
+	let question =
+		'Describe the highest most valuable bugs in bug bounty hunting for webapps'
+
 	const response = await client.chat.completions.create({
 		messages: [
 			{role: 'system', content: ''},
-			{role: 'user', content: 'What is the capital of France?'},
+			{role: 'user', content: question},
 		],
 		model: 'gpt-4o',
 		temperature: 1,
