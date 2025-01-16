@@ -1,5 +1,9 @@
+# Gra Main funcs here
+from ut.utils import label1
+
+
 def main():
-    print("Hello from gra1!")
+    label1("Panty.py")
 
 
 if __name__ == "__main__":
