@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from rich import print as rprint
 from pydantic import BaseModel
 from crewai.flow.flow import Flow, listen, start
 
@@ -8,19 +9,19 @@ class MimuFlowState(BaseModel):
     mimu_minutes: str = ""
 
 
-class MimuFlow(Flow[PoemState]):
+class MimuFlow(Flow[MimuFlowState]):
     @start()
-    def generate_sentence_count(self):
-        print("Generating sentence count")
+    def transcribe_meeting(self):
+        rprint("Generating Transcript")
 
 
 def kickoff():
-    poem_flow = PoemFlow()
+    poem_flow = MimuFlowState()
     poem_flow.kickoff()
 
 
 def plot():
-    poem_flow = PoemFlow()
+    poem_flow = MimuFlowState()
     poem_flow.plot()
 
 
