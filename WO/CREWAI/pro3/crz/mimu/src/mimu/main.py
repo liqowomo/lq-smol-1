@@ -10,8 +10,8 @@ class MeetingMintuesState(BaseModel):
 
 class MeetingMintuesFlow(Flow[MeetingMintuesState]):
     @start()
-    def generate_sentence_count(self):
-        print("Generating sentence count")
+    def trascribe_meeting(self):
+        print("Generating Transcription")
 
 
 def kickoff():
