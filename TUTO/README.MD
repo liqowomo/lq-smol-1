@@ -16,3 +16,4 @@
 | [`gra1`](./gra1/) | Gradioz Tests 1                    |
 [`lobech1`](./lobech1/) | LobeChattings Panty
 [`gau1`](./gau1/) | GoogleGeminiAudioToText
+[`aigradio1`](./aigradio1/) | Testing https://github.com/AK391/ai-gradio - Simple AI Chat interface Locally. 
