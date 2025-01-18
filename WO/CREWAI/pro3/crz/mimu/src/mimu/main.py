@@ -15,6 +15,15 @@ class MeetingMintuesFlow(Flow[MeetingMintuesState]):
             "Generating Transcription"
         )  # Transcribe the meeting here - from voice/t.wav
 
+        import google.generativeai as genai
+
+        myfile = genai.upload_file("../t.wav")
+        print(f"{myfile=}")
+
+        model = genai.GenerativeModel("gemini-1.5-flash")
+        result = model.generate_content([myfile, "Describe this audio clip"])
+        print(f"{result.text=}")
+
 
 def kickoff():
     meeting_minutes_flow = MeetingMintuesFlow()
