@@ -44,7 +44,7 @@ def filewrite(content):
     # Create file content (replace with your actual content)
     os.makedirs("rez", exist_ok=True)
     file_content = (
-        current_datetime + "\n---\n" + question_1 + "\n---\n" + content + "\n"
+        current_datetime + "\n---\n" + question_2 + "\n---\n" + content + "\n"
     )
 
     # Write content to file
