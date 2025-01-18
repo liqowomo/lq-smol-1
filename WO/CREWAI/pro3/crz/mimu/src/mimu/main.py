@@ -1,11 +1,6 @@
 #!/usr/bin/env python
-from random import randint
-
 from pydantic import BaseModel
-
 from crewai.flow.flow import Flow, listen, start
-
-from mimu.crews.poem_crew.poem_crew import PoemCrew
 
 
 class PoemState(BaseModel):
@@ -14,7 +9,6 @@ class PoemState(BaseModel):
 
 
 class PoemFlow(Flow[PoemState]):
-
     @start()
     def generate_sentence_count(self):
         print("Generating sentence count")
