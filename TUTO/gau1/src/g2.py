@@ -56,9 +56,9 @@ def filewrite(content):
 
 
 # -- File Management Function
-
-
 def list_uploaded_files():
-    rprint("My files:")
-    for f in genai.list_files():
-        rprint("  ", f.name)
+    # Open a file to write the output
+    with open("uploaded_files.txt", "w") as file:
+        file.write("My files:\n")  # Write the header
+        for f in genai.list_files():
+            file.write(f"  {f.name}\n")  # Write each file name to the file

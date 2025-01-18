@@ -15,6 +15,7 @@ GA_KEY1 = os.environ.get("GAKE")
 genai.configure(api_key=GA_KEY1)
 model = genai.GenerativeModel("gemini-1.5-flash")
 question_1 = "Explain how AI Booty Dancer works what it he logical tech stack"
+question_2 = "Check this file for vulnerabilities , and suggest codef fixes and pocs"
 
 
 # --- Functions zone ---
@@ -29,9 +30,7 @@ def fu_long():
     """Long File Upload Test"""
     myfile = genai.upload_file("upl/p1.py")
     rprint(f"{myfile=}")
-    result = model.generate_content(
-        [myfile, "Check if any vulnerabilities are in this code"]
-    )
+    result = model.generate_content([myfile, question_2])
     rprint(f"{result.text=}")
     filewrite(result.text)
 
