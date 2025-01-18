@@ -1,4 +1,6 @@
 # This is for image generation
+# Imagen in private beta so cant use this
+
 import os
 from google import genai
 from google.genai import types
