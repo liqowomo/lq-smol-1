@@ -19,12 +19,20 @@ question_1 = "Explain how AI Booty Dancer works what it he logical tech stack"
 
 # --- Functions zone ---
 def text1():
+    """Text to LLM Generation"""
     response = model.generate_content(question_1)
     rprint(response.text)
     filewrite(response.text)
 
 
+def sp_txt():
+    """Speech to tect Generation"""
+    response = model.generate_speech(question_1)
+    rprint(response.audio_content)
+
+
 def filewrite(content):
+    """Function to write the file content in a file"""
     now = datetime.datetime.now()
     current_datetime = now.strftime("%Y-%m-%d_%H-%M-%S")
     filename = f"rez/my_file_{current_datetime}.md"
