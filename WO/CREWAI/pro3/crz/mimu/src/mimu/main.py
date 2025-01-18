@@ -11,7 +11,9 @@ class MeetingMintuesState(BaseModel):
 class MeetingMintuesFlow(Flow[MeetingMintuesState]):
     @start()
     def trascribe_meeting(self):
-        print("Generating Transcription")
+        print(
+            "Generating Transcription"
+        )  # Transcribe the meeting here - from voice/t.wav
 
 
 def kickoff():
