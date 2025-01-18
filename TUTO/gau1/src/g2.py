@@ -31,6 +31,7 @@ def sp_txt():
 def tr_txt():
     """Transcribing the audio"""
     audio_file = genai.upload_file("audio/t.wav")
+    rprint(f"{audio_file=}")
     prompt = "Generate a transcript of the speech."
     response = model.generate_content([prompt, audio_file])
     rprint(response.text)
