@@ -2,13 +2,14 @@
 
 from ut.utils import label1
 
+
 from rich.traceback import install
 
 install(show_locals=True)
 
 
 def main():
-    print("Hello from gau1!")
+    label1("Hello World")
 
 
 if __name__ == "__main__":
