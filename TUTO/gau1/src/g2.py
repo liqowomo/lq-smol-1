@@ -53,3 +53,12 @@ def filewrite(content):
         f.write(file_content)
 
     rprint(f"File created successfully: {filename}")
+
+
+# -- File Management Function
+
+
+def list_uploaded_files():
+    rprint("My files:")
+    for f in genai.list_files():
+        rprint("  ", f.name)
