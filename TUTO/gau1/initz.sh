@@ -21,7 +21,7 @@ b1() {
 
 c1() {
     # PKG Installs
-    CO1="uv add rich google-generativeai"
+    CO1="uv add rich google-generativeai python-dotenv"
     echo -e "${GREEN} Executing $CO1${NC}"
     echo -e " $CO1 ${NC}"
     $CO1
