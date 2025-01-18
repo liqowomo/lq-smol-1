@@ -14,7 +14,10 @@ export NC='\033[0m' # No Color
 
 # Commands
 b1() {
-    echo -e "${RED} hey"
+    echo -e "${CYAN}==================================="
+    echo -e "Installing Kokoro.js - 82M Params TTS Model"
+    echo -e ""
+    echo -e "================================================= ${NC}"
 }
 
 c1() {
