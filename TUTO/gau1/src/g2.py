@@ -20,13 +20,21 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 def sp_txt():
-    """Speech to tect Generation"""
+    """Explaining the audio"""
     myfile = genai.upload_file("audio/t.wav")
     rprint(f"{myfile=}")
-    model = genai.GenerativeModel("gemini-1.5-flash")
     result = model.generate_content([myfile, "Describe this audio clip"])
     rprint(f"{result.text=}")
     filewrite(result.text)
+
+
+def tr_txt():
+    """Transcribing the audio"""
+    audio_file = genai.upload_file("audio/t.wav")
+    prompt = "Generate a transcript of the speech."
+    response = model.generate_content([prompt, audio_file])
+    rprint(response.text)
+    filewrite(response.text)
 
 
 def filewrite(content):
