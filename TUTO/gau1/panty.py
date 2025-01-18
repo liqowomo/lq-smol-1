@@ -1,7 +1,8 @@
 # Testing Text generation with Gemini and then moving on to audi processing
 
 from ut.utils import label1
-from src.g1 import text1, sp_txt
+from src.g1 import text1
+from src.g2 import sp_txt
 
 
 from rich.traceback import install

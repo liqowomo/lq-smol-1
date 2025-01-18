@@ -33,13 +33,11 @@ def filewrite(content):
     """Function to write the file content in a file"""
     now = datetime.datetime.now()
     current_datetime = now.strftime("%Y-%m-%d_%H-%M-%S")
-    filename = f"rez/my_file_{current_datetime}.md"
+    filename = f"rez/transcribez_{current_datetime}.md"
 
     # Create file content (replace with your actual content)
     os.makedirs("rez", exist_ok=True)
-    file_content = (
-        current_datetime + "\n---\n" + question_1 + "\n---\n" + content + "\n"
-    )
+    file_content = current_datetime + "\n---\n" + content + "\n"
 
     # Write content to file
     with open(filename, "w") as f:
