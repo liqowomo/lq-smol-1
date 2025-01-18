@@ -12,16 +12,12 @@ install(show_locals=True)
 
 def main():
     fu_long()
+    list_uploaded_files()
 
 
 def fulong():
     label1("Long File Upload Test - Find Vulnerabilities")
     fu_long()
-
-
-def tc_audi():
-    label1("Transcribing Audio - audio/t.wav")
-    tr_txt()
 
 
 if __name__ == "__main__":
