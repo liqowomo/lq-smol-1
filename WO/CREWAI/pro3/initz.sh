@@ -44,5 +44,4 @@ c3() {
 }
 
 # Execution
-b1
-c1
+c3
