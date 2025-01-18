@@ -27,8 +27,12 @@ def text1():
 
 def sp_txt():
     """Speech to tect Generation"""
-    response = model.generate_speech(question_1)
-    rprint(response.audio_content)
+    myfile = genai.upload_file("audio/t.wav")
+    rprint(f"{myfile=}")
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    result = model.generate_content([myfile, "Describe this audio clip"])
+    rprint(f"{result.text=}")
+    filewrite(result.text)
 
 
 def filewrite(content):
