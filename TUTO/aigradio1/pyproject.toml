@@ -4,4 +4,8 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ai-gradio[gemini]>=0.2.18",
+    "python-dotenv>=1.0.1",
+    "rich>=13.9.4",
+]
