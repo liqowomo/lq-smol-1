@@ -1,4 +1,4 @@
-# Simple text generation with Gemini
+# Speech to text transcribe
 # Code taken from -https://ai.google.dev/gemini-api/docs/quickstart?lang=python
 
 # --- Import zone ---
@@ -14,15 +14,9 @@ load_dotenv()
 GA_KEY1 = os.environ.get("GAKE")
 genai.configure(api_key=GA_KEY1)
 model = genai.GenerativeModel("gemini-1.5-flash")
-question_1 = "Explain how AI Booty Dancer works what it he logical tech stack"
 
 
 # --- Functions zone ---
-def text1():
-    """Text to LLM Generation"""
-    response = model.generate_content(question_1)
-    rprint(response.text)
-    filewrite(response.text)
 
 
 def sp_txt():
