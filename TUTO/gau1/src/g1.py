@@ -35,6 +35,11 @@ def sp_txt():
     filewrite(result.text)
 
 
+def fu_long():
+    """Long File Upload Test"""
+    myfile = genai.upload_file("upl/")
+
+
 def filewrite(content):
     """Function to write the file content in a file"""
     now = datetime.datetime.now()
