@@ -25,19 +25,15 @@ def text1():
     filewrite(response.text)
 
 
-def sp_txt():
-    """Speech to tect Generation"""
-    myfile = genai.upload_file("audio/t.wav")
-    rprint(f"{myfile=}")
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    result = model.generate_content([myfile, "Describe this audio clip"])
-    rprint(f"{result.text=}")
-    filewrite(result.text)
-
-
 def fu_long():
     """Long File Upload Test"""
-    myfile = genai.upload_file("upl/")
+    myfile = genai.upload_file("upl/p1.py")
+    rprint(f"{myfile=}")
+    result = model.generate_content(
+        [myfile, "Check if any vulnerabilities are in this code"]
+    )
+    rprint(f"{result.text=}")
+    filewrite(result.text)
 
 
 def filewrite(content):

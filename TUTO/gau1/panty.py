@@ -1,7 +1,7 @@
 # Testing Text generation with Gemini and then moving on to audi processing
 
 from ut.utils import label1
-from src.g1 import text1
+from src.g1 import text1, fu_long
 from src.g2 import sp_txt, tr_txt, list_uploaded_files
 
 
@@ -11,7 +11,12 @@ install(show_locals=True)
 
 
 def main():
-    list_uploaded_files()
+    fu_long()
+
+
+def fulong():
+    label1("Long File Upload Test - Find Vulnerabilities")
+    fu_long()
 
 
 def tc_audi():
